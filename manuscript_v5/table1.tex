@@ -1,0 +1,21 @@
+\label{tab:model-coverage}
+\begingroup
+\fontsize{8.5}{10.5}\selectfont
+\setlength{\tabcolsep}{4.5pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabularx}{\textwidth}{@{}p{26mm}Ylrrr@{}}
+\toprule
+\textbf{Method} & \textbf{Configuration} & \textbf{Source} & \textbf{Abs.} & \textbf{Ord.} & \textbf{Local} \\
+\midrule
+CoPRA & Controlled family-fold OOF & Han et al. 2025 & 752 & 338 & 220 \\
+DeePNAP & Controlled family-fold OOF & Pandey et al. 2024 & 562 & 242 & 161 \\
+OmniBioTE & Official checkpoint and adapted frozen-head OOF & Chen et al. 2026 & 736 & 328 & 220 \\
+PRdeltaGPred & Structural port (WT and mutants) & Hong et al. 2023 & 286 & 235 & 153 \\
+GBNL & Author-approved reconstruction (OOF) & Zia et al. 2026 & 391 & 149 & 82 \\
+SVSBI & Author-approved reconstruction (OOF) & Shen et al. 2023 & 391 & 149 & 82 \\
+ProRB & Author-provided checkpoint & Xue et al. 2026 & 391 & 149 & 82 \\
+PANTHER & Native service score & Aletayeb et al. 2026 & --- & 87 & 31\textsuperscript{a} \\
+PRA-Pred & ss+str and ds+enz applications & Harini et al. 2024 & 121 & 106 & 78 \\
+mCSM-NA & Direct mutation-effect service & Pires and Ascher 2017 & --- & 246 & 157 \\
+M2-PRNet & Five released checkpoints with reconstructed, index-aligned inputs & Wang et al. 2026 & 257 & 211 & 131 \\
+\bottomrule

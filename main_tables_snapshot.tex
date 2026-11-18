@@ -1,0 +1,141 @@
+\begin{table*}[!t]
+\centering
+\caption{\textbf{Evaluated model configurations and matched evaluation coverage.}}
+\label{tab:model-coverage}
+\begingroup
+\fontsize{8.5}{11}\selectfont
+\setlength{\tabcolsep}{4.5pt}
+\renewcommand{\arraystretch}{1.14}
+\begin{tabularx}{\textwidth}{@{}p{29mm}Yrrr@{}}
+\specialrule{0.7pt}{0pt}{4pt}
+\textbf{Method} & \textbf{Evaluated configuration} & \multicolumn{3}{c}{\textbf{Matched coverage}} \\
+\cmidrule(l){3-5}
+ & & \shortstack[r]{Absolute\\units} & \shortstack[r]{Ordinary\\pairs} & \shortstack[r]{Local\\pairs} \\
+\specialrule{0.35pt}{3pt}{4pt}
+CoPRA (controlled) & Frozen encoders; fresh task modules; absolute-MSE family OOF (Han et al. 2025) & 752 & 338 & 220 \\
+DeePNAP & Controlled family-fold OOF (Pandey et al. 2024) & 562 & 242 & 161 \\
+OmniBioTE & Official affinity checkpoint; separate frozen-head OOF (Chen et al. 2026) & 736 & 328 & 220 \\
+PRdeltaGPred & Documented structural port, WT and mutants (Hong et al. 2023) & 286 & 235 & 153 \\
+GBNL & Author-approved reconstruction, OOF (Zia et al. 2026) & 391 & 149 & 82 \\
+SVSBI & Author-approved reconstruction, OOF (Shen et al. 2023) & 391 & 149 & 82 \\
+ProRB & Author-provided checkpoint (Xue et al. 2026) & 391 & 149 & 82 \\
+PANTHER & Service interaction score\textsuperscript{a} (Aletayeb et al. 2026) & \textemdash & 87 & 31\textsuperscript{a} \\
+PRA-Pred & ss+str and ds+enz applications (Harini et al. 2024) & 121 & 106 & 78 \\
+mCSM-NA & Direct mutation-effect service (Pires and Ascher 2017) & \textemdash & 246 & 157 \\
+M2-PRNet & Five checkpoints; reconstructed, index-aligned inputs (Wang et al. 2026) & 257 & 211 & 131 \\
+\specialrule{0.7pt}{3pt}{0pt}
+\end{tabularx}
+\par\vspace{4pt}
+\noindent\begin{minipage}{\textwidth}
+\fontsize{7.5}{9.5}\selectfont
+Each method is compared with matched references on its own evaluation members. OOF, out-of-fold prediction; WT, wild type. \textemdash, no absolute-affinity evaluation on the pKd scale.\par
+\textsuperscript{a}PANTHER retains native interaction scores; the local count denotes 31 ranked pairs from four common landscapes. Full implementation details and numerical comparisons are in Supplementary Sections S2 and S4.
+\end{minipage}
+\endgroup
+\end{table*}
+
+\begin{table*}[!t]
+\centering
+\caption{\textbf{Controlled CoPRA errors, local capabilities and paired family uncertainty.}}
+\label{tab:controlled-errors}
+\begingroup\fontsize{8.5}{11}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.14}
+\begin{tabularx}{\textwidth}{@{}Yrrrr@{}}
+\toprule
+Measure & CoPRA & Additive & Zero & Paired effect [95\% interval] \\
+\midrule
+\multicolumn{5}{@{}l}{\textbf{A. Broad evaluation: 752 units / 338 ordinary pairs}}\\
+Absolute MAE, 752 units & 1.1431 & 1.2898 & --- & --- \\
+Linked absolute MAE, 338-pair endpoints & 1.2008 & 1.3345 & --- & --- \\
+Ordinary $\Delta$MAE, 338 pairs & 0.7917 & 0.8629 & 0.8816 & 0.0713 [0.0362, 0.1068] \\
+\midrule
+\multicolumn{5}{@{}l}{\textbf{B. Local evaluation: 220 pairs / 21 landscapes / 20 families}}\\
+Linked absolute MAE, 241 units & 1.0593 & 1.1139 & --- & 0.0547 [$-$0.1784, 0.2692] \\
+Ordinary $\Delta$MAE & 0.6841 & 0.7426 & 0.7580 & 0.0585 [0.0006, 0.1126] \\
+cMAE & 0.3991 & 0.3749 & 0.3787 & $-$0.0243 [$-$0.0635, 0.0088] \\
+Position-mean Spearman & 0.1886 & 0.1481 & --- & 0.0405 [$-$0.0822, 0.1645] \\
+Predicted / observed SD & 0.6422 & 0.0709 & 0 & 0.5714 [0.2808, 0.9560] \\
+$|\mathrm{SD\ ratio}-1|$ & 0.7707 & 0.9291 & 1 & 0.1585 [$-$0.0596, 0.3266] \\
+\bottomrule
+\end{tabularx}
+\par\vspace{4pt}
+\noindent\begin{minipage}{\textwidth}\fontsize{7.5}{9.5}\selectfont
+Errors use pKd; lower errors and amplitude distance are better. Effects are additive minus CoPRA for errors and amplitude distance; CoPRA minus additive for Spearman and SD ratio. An SD-ratio increase measures response strength; calibration is assessed by distance from one. Values average three seed-specific family-macro scores. Local summaries weight positions, landscapes and families hierarchically; linked absolute evaluation counts each WT once. Intervals condition on saved predictions: 2,000 paired family draws for broad ordinary MAE; 10,000 for local metrics. Dashes denote unavailable or undefined quantities. Additional zero-minus-CoPRA local effects: ordinary MAE 0.0739 [0.0155, 0.1287]; cMAE $-$0.0205 [$-$0.0609, 0.0151]. Sources: Tables S17, S18 and S21.\par
+\end{minipage}\endgroup
+\end{table*}
+
+\begin{table*}[p]
+\centering
+\caption{\textbf{Method-specific common-member comparisons.}}
+\label{tab:common-methods}
+\begingroup\fontsize{8.5}{11}\selectfont\setlength{\tabcolsep}{5pt}\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}Yrrr@{}}
+\toprule
+Method or matched reference & Absolute MAE & Ordinary $\Delta$MAE & Local cMAE \\
+\midrule
+\multicolumn{4}{@{}l}{\textbf{Common scope 562 / 242 / 161 (absolute units / ordinary pairs / local pairs); S3}}\\
+CoPRA (controlled) & 1.0285 & 0.8074 & 0.4239 \\
+Additive & 1.1367 & 0.9010 & 0.3821 \\
+DeePNAP & 1.0979 & 0.9372 & 0.3894 \\
+Sequence additive & 1.0348 & 0.9132 & 0.3810 \\
+OmniBioTE official & 0.5918 & 0.9103 & 0.3895 \\
+OmniBioTE adapted & 1.3699 & 0.9457 & 0.3978 \\
+Zero change & --- & 0.9271 & 0.3840 \\
+\addlinespace[3pt]
+\multicolumn{4}{@{}l}{\textbf{Common scope 736 / 328 / 220 (absolute units / ordinary pairs / local pairs); S4}}\\
+CoPRA (controlled) & 1.1514 & 0.8108 & 0.3991 \\
+Additive & 1.2877 & 0.8875 & 0.3749 \\
+Zero change & --- & 0.9068 & 0.3787 \\
+OmniBioTE official & 0.6555 & 0.9032 & 0.3846 \\
+OmniBioTE adapted & 1.4558 & 0.9162 & 0.3886 \\
+\addlinespace[3pt]
+\multicolumn{4}{@{}l}{\textbf{Common scope 286 / 235 / 153 (absolute units / ordinary pairs / local pairs); S6}}\\
+CoPRA (controlled) & 1.1388 & 0.7446 & 0.3980 \\
+Additive & 1.2536 & 0.8047 & 0.3831 \\
+PRdeltaGPred & 1.7480 & 0.8366 & 0.4069 \\
+Zero change & --- & 0.8186 & 0.3845 \\
+\addlinespace[3pt]
+\multicolumn{4}{@{}l}{\textbf{Common scope --- / 246 / 157 (absolute units / ordinary pairs / local pairs); S7}}\\
+mCSM-NA & --- & 2.1040 & 1.6998 \\
+CoPRA (controlled) & --- & 0.7697 & 0.4042 \\
+Additive & --- & 0.8281 & 0.3845 \\
+Zero change & --- & 0.8421 & 0.3858 \\
+\addlinespace[3pt]
+\multicolumn{4}{@{}l}{\textbf{Common scope 391 / 149 / 82 (absolute units / ordinary pairs / local pairs); S8}}\\
+CoPRA (controlled) & 1.0644 & 0.7252 & 0.3293 \\
+CoPRA additive (OOF) & 1.1997 & 0.8035 & 0.2937 \\
+GBNL reconstruction (OOF) & 1.0867 & 0.8198 & 0.3028 \\
+SVSBI reconstruction (OOF) & 1.1374 & 0.8237 & 0.2985 \\
+ProRB author checkpoint & 1.2026 & 0.8455 & 0.3039 \\
+Zero change & --- & 0.8320 & 0.3037 \\
+\addlinespace[3pt]
+\multicolumn{4}{@{}l}{\textbf{Common scope 121 / 106 / 78 (absolute units / ordinary pairs / local pairs); S9}}\\
+PRA-Pred & 0.8993 & 0.7136 & 0.2526 \\
+CoPRA (controlled) & 1.2962 & 0.7121 & 0.2946 \\
+CoPRA additive (OOF) & 1.6066 & 0.7302 & 0.2407 \\
+Zero change & --- & 0.7428 & 0.2418 \\
+\addlinespace[3pt]
+\multicolumn{4}{@{}l}{\textbf{Common scope 257 / 211 / 131 (absolute units / ordinary pairs / local pairs); S10}}\\
+M2-PRNet, indices aligned & 1.3995 & 0.8327 & 0.3407 \\
+CoPRA (controlled) & 1.1535 & 0.7636 & 0.3658 \\
+CoPRA additive (OOF) & 1.2930 & 0.8210 & 0.3389 \\
+Zero change & --- & 0.8353 & 0.3402 \\
+\addlinespace[3pt]
+\bottomrule
+\end{tabularx}
+\par\vspace{5pt}
+\begin{tabularx}{\textwidth}{@{}Yrrr@{}}
+\toprule
+\multicolumn{4}{@{}l}{\textbf{PANTHER native-score diagnostics (Table S11); identical members within columns}}\\
+Method & Exact zeros / 87 pairs & Strict direction / 87 pairs & Position rank / 31 pairs \\
+\midrule
+PANTHER & 47/87 (54.0\%) & 26.4\% & 0.2796 \\
+CoPRA (controlled) & 0/87 & 74.3\% & 0.0642 \\
+Additive & 0/87 & 65.9\% & 0.2081 \\
+\bottomrule
+\end{tabularx}
+\par\vspace{4pt}
+\noindent\begin{minipage}{\textwidth}\fontsize{7.5}{9.5}\selectfont
+Each block compares identical members; different blocks define different populations. Errors use pKd and lower is better. OOF entries average three separately scored seeds; released models retain their fixed checkpoints. The additive comparator is the CoPRA readout unless labelled sequence additive. Full local ordinary errors and implementation identities remain in S3--S10. Adapted OmniBioTE uses the S5 configuration on the same scope as S4. M2 uses complete index alignment. PANTHER retains negative mutant-minus-WT service scores: no pKd conversion or MAE is assigned. Direction counts matching nonzero signs; rank uses four common landscapes (29 positions), with PANTHER ranks defined in four of five eligible landscapes. CoPRA/additive ranks are defined in all five; their table values use the same four.\par
+\end{minipage}\endgroup
+\end{table*}

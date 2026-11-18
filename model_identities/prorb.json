@@ -1,0 +1,118 @@
+{
+  "report_id": "PRORB-AUTHOR-CHECKPOINT-ASSETS-V1",
+  "date": "2026-10-16",
+  "download_status": "DOWNLOADS_VERIFIED (24/24 items); no re-download performed",
+  "identity": {
+    "github": "https://github.com/ymaa19/ProRB/tree/v2.2",
+    "git_commit": "6b18f2d144251fc5b8a5ac465528afe07c25da08",
+    "hf_repo": "https://huggingface.co/ymaaaa/ProRB",
+    "hf_revision": "4b0091890c761fcb610a4bbf941e88307a3a0c36",
+    "rnafm_hf_repo": "https://huggingface.co/multimolecule/rnafm",
+    "rnafm_hf_revision": "7d6e73ad3b48e042b378f9a788a56ccb4d573a27"
+  },
+  "assets": [
+    {
+      "role": "affinity_checkpoint",
+      "file": "ProRB/author_bundle/model.pt",
+      "bytes": 1733918683,
+      "sha256": "8037368b9eba020021a23db8ca396da4fd693a8b95d9b65285721a326da5ba36",
+      "hash_reference": "upstream_lfs",
+      "run_copy_sha256_match": true
+    },
+    {
+      "role": "author_inference_entry",
+      "file": "ProRB/author_bundle/predict_affinity.py",
+      "sha256": "62a472c77ee215b9f5c92df1a96c1495bf0d62914a248672f1cec5a21599538c",
+      "hash_reference": "previous_local_receipt"
+    },
+    {
+      "role": "author_inference_script",
+      "file": "ProRB/author_bundle/predict_affinity.sh",
+      "sha256": "2ce6b1051e4e5325c1a99d1d9ef37febd76a5b275e0e62598e4d7f58cd38173c",
+      "hash_reference": "previous_local_receipt"
+    },
+    {
+      "role": "author_dataset",
+      "file": "ProRB/author_bundle/dataset.py",
+      "sha256": "66d0917f7f6eb9421f25cc98f42948ce9720c4b7fa93d6d41f6bf7783faef4f6",
+      "hash_reference": "previous_local_receipt",
+      "deployed_as": "run/utils/dataset.py (repo original saved at restricted/originals/dataset.repo_v2.2.py sha256 8AC3C709EDAFF28AD534B651A2FD0CCE69FE310B96AEDE3BD5E8E30F9F6CBE6A)"
+    },
+    {
+      "role": "author_example",
+      "file": "ProRB/author_bundle/example.csv",
+      "sha256": "504982ea1471c3798516e46ded2556c9b03a12fdea50175556e6d619f396f8a5",
+      "hash_reference": "previous_local_receipt"
+    },
+    {
+      "role": "rna_encoder_weights_downloaded",
+      "file": "ProRB/rnafm/model.safetensors",
+      "bytes": 398117588,
+      "sha256": "ec69333eb894dbefb580e690b0cbe1cbae9845fefd2bc78da914cd14226a2828",
+      "hash_reference": "upstream_lfs"
+    },
+    {
+      "role": "rna_encoder_config_downloaded",
+      "file": "ProRB/rnafm/config.json",
+      "sha256": "c6e64a54fe40e5400aa66f4bd4a58ebdbbf2dc52c105ac674abe719473579099",
+      "hash_reference": "previous_local_receipt"
+    },
+    {
+      "role": "rna_encoder_tokenizer_config_downloaded",
+      "file": "ProRB/rnafm/tokenizer_config.json",
+      "sha256": "677a777318ed736128ea76b7ca07cfdb075e7b606ea752343763807d26743906",
+      "hash_reference": "previous_local_receipt"
+    },
+    {
+      "role": "rna_encoder_vocab_downloaded",
+      "file": "ProRB/rnafm/vocab.txt",
+      "sha256": "f55f023afd2901f57ba508105ef48a699afc609b927812dc8f687df42a1ee5f1",
+      "hash_reference": "previous_local_receipt"
+    },
+    {
+      "role": "source_archive",
+      "file": "ProRB/source/ProRB-6b18f2d144251fc5b8a5ac465528afe07c25da08.zip",
+      "bytes": 57399,
+      "sha256": "dba503a3f4e694aa91f992ca91f718ef30ba2725df2f3046e0d3e37b981a6953",
+      "hash_reference": "local_fingerprint_only",
+      "zip_crc_ok": true
+    }
+  ],
+  "run_directory_adaptations": [
+    {
+      "file": "run/fm_model/rnafm/model.safetensors",
+      "derived_sha256": "f40029935081f694bdf82fe0403d4310e83530d9b7662a0e60a8a1e5c8b0e800",
+      "derived_bytes": 396463528,
+      "source_sha256": "ec69333eb894dbefb580e690b0cbe1cbae9845fefd2bc78da914cd14226a2828",
+      "transform": "strip 'model.' wrapper prefix; rename 'encoder.layer_norm.*' -> 'encoder.emb_layer_norm_after.*'; drop unused 'lm_head.*' and 'ss_head.*'; truncate word_embeddings rows 28->26 to match trained rna_model vocab_size=26",
+      "reason": "downloaded RNA-FM weights use an older multimolecule naming and 28-token vocab; author-pinned multimolecule 0.0.6 RnaFmModel uses 'emb_layer_norm_after' and the trained ProRB rna_model has vocab_size=26",
+      "note": "the adapted file only needs to instantiate the module; strict load of model.pt then supplies all trained rna_model parameters (see example_verification.json)"
+    },
+    {
+      "file": "run/fm_model/rnafm/config.json",
+      "derived_sha256": "5b7180af4219baf4da2e26b5cf2c96bddf8e43720c05b5bc0b441bf61c9e2099",
+      "source_sha256": "c6e64a54fe40e5400aa66f4bd4a58ebdbbf2dc52c105ac674abe719473579099",
+      "transform": "vocab_size 28 -> 26 (and lm_head.num_labels 28 -> 26)",
+      "reason": "trained ProRB rna_model word_embeddings is [26,640]"
+    },
+    {
+      "file": "run/fm_model/rnafm/tokenizer_config.json",
+      "derived_sha256": "8911977d8c0d06bcae558847f80c397dffd4bc5bc77e0b00366b9c9d668d2441",
+      "source_sha256": "677a777318ed736128ea76b7ca07cfdb075e7b606ea752343763807d26743906",
+      "transform": "regenerated with multimolecule 0.0.6 default RnaTokenizer (26 tokens)",
+      "reason": "downloaded config used transformers-5.x list-form extra_special_tokens and a 28-token vocab incompatible with transformers 4.48.1 + multimolecule 0.0.6 + trained vocab_size=26"
+    },
+    {
+      "file": "run/fm_model/rnafm/vocab.txt",
+      "derived_sha256": "a417032b817913922012930cc28539f2051beb67f4381b1717f3405562966c88",
+      "source_sha256": "f55f023afd2901f57ba508105ef48a699afc609b927812dc8f687df42a1ee5f1",
+      "transform": "26-token default vocabulary",
+      "reason": "ids for A/C/G/U (6-9) and all IUPAC ambiguity codes used by the frozen inputs (10-20) are identical to the downloaded vocab"
+    }
+  ],
+  "notes": [
+    "No resource was re-downloaded; only copies were made into the independent run directory and hashed to confirm搬运 integrity.",
+    "Original author assets are retained separately.",
+    "Third-party checkpoints live only in the controlled resource area and in the (non-committed) run copy; they are not re-distributed."
+  ]
+}

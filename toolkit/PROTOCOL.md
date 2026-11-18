@@ -1,0 +1,28 @@
+# Evaluation protocol
+
+## One-page overview
+
+1. Freeze traceable measurement units and experimentally paired WT–mutant members. Record source, assay, construct and structure correspondence; retain unresolved correspondence as a status. Exclude censored values from point-error evaluation and apply source-based deduplication before scoring. Structural position controls are a separate cohort. Contact distance and model scores never select members.
+2. Intersect successful finite predictions across participating methods and all declared seeds. Rebuild landscape and position weights after intersection. A local landscape has at least five distinct positions after intersection; this is a protocol eligibility rule, not a universal performance threshold. Compare each method on the same members; do not rank separate coverage scopes against one another.
+3. Report absolute MAE (background affinity), ordinary ΔMAE (WT-relative response including its mean), and centered cMAE (within-landscape response shape and amplitude) as separate quantities. Report position-mean Spearman (ordering), predicted/observed SD ratio (dispersion), zero-response frequency, direction counts and coverage alongside them. The zero-change reference is always meaningful for ΔpKd; a matched additive predictor can be supplied as another method. There is no combined score or universal pass threshold.
+4. Report family distributions and paired family-bootstrap uncertainty conditional on the saved predictions. OOF seeds are scored individually before their metrics are averaged. A fixed ensemble is one declared prediction, not a set of independent families.
+
+## Data and scales
+
+An absolute unit is one construct, condition and source-defined measurement. Summarize repeated measurements as source-appropriate, e.g. median on the pKd scale. Pair a single mutation with its recorded same-experiment WT; retain identifiers for the source and the provenance of the experimental pair. Construct and structure correspondence are explicit, including unknown states. Input files contain the already qualified members; the calculator does not infer pairing, source correspondence, aliases, exposure or structural equivalence.
+
+Use pKd = −log10(Kd in mol/L); higher pKd means stronger binding. Effects are mutant minus WT. Where appropriate, ΔG in kcal/mol may be converted to a reference pKd coordinate as −ΔG/1.3635606572452885 at 298 K; document source temperatures. Direct differences must already be aligned to the observed direction and unit. Score-only values retain native units and aligned sign. Do not calculate pKd error or SD ratios across score and pKd scales. Exact zero is a real response; missing/nonfinite data are not zeros.
+
+## Weights and statistics
+
+Absolute MAE averages measurement errors within family, then families equally. In linked absolute analyses each unit, including shared WT, appears once. Within a landscape, each distinct position has equal weight and its substitutions share that weight. Landscape values average equally within family, then families equally. Each OOF seed yields its own metric; aggregate the seed-specific family values. Endpoint residuals must use the same recorded fold/checkpoint or predetermined fixed ensemble. Common coverage includes every declared seed.
+
+For q = predicted effect − observed effect and weighted landscape expectation E, ΔMAE = E|q| and cMAE = E|q−E(q)|. Centering removes the landscape mean; ordinary and centered MAE do not form an additive decomposition. Spearman uses mean effects per position; constant predicted or observed position means give undefined rank. Predicted/observed SD uses weighted within-landscape variances; observed variance zero gives undefined ratio. Defined-rank coverage is reported per method and the additional common-rank comparison uses only landscapes defined for all selected rank methods and seeds. Select methods in `rank_methods` when needed. Undefined values are omitted from their own summaries and coverage is explicit.
+
+Direction uses three-class sign agreement over all pairs, strict agreement on observed-nonzero pairs (predicted zero is a miss), and both-nonzero coverage. Counts in the tool pool pair–seed incidences and are not family-macro; divide the reported numerators by their corresponding denominators. Report the subset and denominator; a model-responsive subset alone cannot characterize overall accuracy.
+
+## Squared-error accounts
+
+With endpoint residuals eW and eM and q=eM−eW, pair-incidence endpoint MSE satisfies E[(eW²+eM²)/2] = E[((eW+eM)/2)²] + E[q²]/4. Repeated WT occurrences are retained, with identical position–landscape–family weights for every term. Within each landscape, E[q²]=E[q]²+E[(q−E[q])²]. Centered MSE also equals Var(predicted)+Var(observed)−2 Cov(predicted,observed). Aggregate the already computed landscape quantities. These are MSE identities, never an MAE subtraction. Direct-effect methods lack endpoint decomposition; score-only methods lack cross-scale error and variance accounts.
+
+For the main CoPRA analysis use 2,000 family draws with RNG seed 20261021 for broad endpoint analysis and 10,000 draws with seed 20260921 for local analysis. Draw whole families with replacement and share draws across methods and metrics after seed-specific family scores are averaged. Percentile intervals describe between-family variation conditional on fitted predictions and coverage, with family exchangeability assumed. Historical method-specific aggregation conventions are recorded in the supplementary tables; choose the stated comparison scope and do not silently reinterpret archived results.

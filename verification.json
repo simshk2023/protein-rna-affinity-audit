@@ -1,0 +1,173 @@
+{
+  "status": "PASS_LOCAL_REPLAY",
+  "purpose": "Unpublished release candidate; CPU replay of archived results",
+  "environment": {
+    "python": "3.11.5",
+    "platform": "Windows x86-64",
+    "pinned_packages_matched": 17,
+    "clean_environment_install_tested": false,
+    "font": "Arial"
+  },
+  "synthetic": {
+    "status": "PASS",
+    "tests": 9,
+    "example_json_written": true
+  },
+  "primary": {
+    "status": "PASS",
+    "input_files_hashed": 2,
+    "accepted_source_links": 827,
+    "coverage": {
+      "absolute_units": 752,
+      "ordinary_pairs": 338,
+      "local_pairs": 220,
+      "local_landscapes": 21,
+      "local_families": 20
+    }
+  },
+  "main_and_supplement_tables": {
+    "status": "PASS",
+    "table_2_rows": 7,
+    "table_3_configurations": 10,
+    "table_s36_linked_rows": 2,
+    "table_s36_zero_contrasts": 2,
+    "table_s37_rows": 37
+  },
+  "comparator_and_mechanism_replay": {
+    "input_files_hashed": 221,
+    "prior_service_coverage": {
+      "panther_endpoint_responses": 110,
+      "panther_pairs": 87,
+      "mcsm_pairs": 267,
+      "status": "PASS"
+    },
+    "pra": {
+      "all_pass": true,
+      "endpoints": 128,
+      "max_formula_error_G": 0.0,
+      "max_contribution_sum_error_G": 1.9984014443252818e-15
+    },
+    "m2": {
+      "status": "PASS",
+      "metrics": 72,
+      "max_difference": 3.3306690738754696e-16
+    },
+    "three_arm": {
+      "status": "PASS",
+      "cells": 30,
+      "seed_values": 90,
+      "max_difference": 0.0
+    }
+  },
+  "figures": {
+    "archived_renderers_completed": 7,
+    "comparison_to_v5": {
+      "figure1": {
+        "dimensions_match": true,
+        "text_tokens_match": true,
+        "changed_pixel_fraction_72dpi": 0.0
+      },
+      "figure2": {
+        "dimensions_match": true,
+        "text_tokens_match": true,
+        "changed_pixel_fraction_72dpi": 0.0
+      },
+      "figure3": {
+        "dimensions_match": true,
+        "text_tokens_match": true,
+        "changed_pixel_fraction_72dpi": 0.0
+      },
+      "figure4": {
+        "dimensions_match": true,
+        "text_tokens_match": true,
+        "changed_pixel_fraction_72dpi": 0.03440640499321977
+      },
+      "figure5": {
+        "dimensions_match": true,
+        "text_tokens_match": true,
+        "changed_pixel_fraction_72dpi": 0.0
+      },
+      "figure6": {
+        "dimensions_match": true,
+        "text_tokens_match": true,
+        "changed_pixel_fraction_72dpi": 0.001778904745056414
+      },
+      "figure7": {
+        "dimensions_match": true,
+        "text_tokens_match": true,
+        "changed_pixel_fraction_72dpi": 0.0
+      },
+      "figureS14": {
+        "dimensions_match": true,
+        "text_tokens_match": true,
+        "changed_pixel_fraction_72dpi": 6.569377316878607e-05
+      },
+      "figureE1": {
+        "dimensions_match": true,
+        "text_tokens_match": true,
+        "changed_pixel_fraction_72dpi": 0.0
+      }
+    },
+    "alignment_counts_match_archived_summaries": {
+      "equal_residue_vectors": [
+        115,
+        0,
+        0
+      ],
+      "output_zeros": [
+        2,
+        0,
+        0
+      ]
+    },
+    "note": "Figure 4, Figure 6 and Figure S14 retain raster differences. All checked text tokens and dimensions agree. Reference SHA-256 values describe manuscript assets."
+  },
+  "external": {
+    "status": "PASS",
+    "families": 3,
+    "coverage": {
+      "sf3a1": {
+        "checkpoints": 30,
+        "input_endpoints": 11,
+        "point_endpoints": 8,
+        "attempted_pairs": 10,
+        "point_pairs": 7,
+        "censored_or_nonbinding": 3,
+        "local_positions": 7
+      },
+      "sepsecs": {
+        "checkpoints": 30,
+        "input_endpoints": 13,
+        "point_endpoints": 12,
+        "attempted_pairs": 12,
+        "point_pairs": 11,
+        "censored_or_nonbinding": 1,
+        "local_positions": 11
+      },
+      "npl3": {
+        "checkpoints": 30,
+        "input_endpoints": 7,
+        "point_endpoints": 7,
+        "attempted_pairs": 6,
+        "point_pairs": 6,
+        "censored_or_nonbinding": 0,
+        "local_positions": 6
+      }
+    },
+    "cells_checked": 64,
+    "maximum_absolute_difference": 1.1102230246251565e-16,
+    "contrasts_checked": 5,
+    "frozen_files_verified": 102,
+    "model_execution_count": 0
+  },
+  "manuscript": {
+    "main_pages": 10,
+    "supplement_pages": 54,
+    "v5_and_arxiv_figures_identical": 7,
+    "main_numeric_table_cells_agree": true
+  },
+  "training_runs": 0,
+  "inference_runs": 0,
+  "live_service_calls": 0,
+  "remote_deposits": 0
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "figure": 1,
+  "entry": "make_framing_grounded_20261107.py",
+  "expected_pdf": "rendered/variants/glossy/molecular_context_grounded.pdf",
+  "source": "work"
+ },
+ {
+  "figure": 2,
+  "entry": "render_figure1_wide.py",
+  "expected_pdf": "figure1.pdf",
+  "source": "outputs/figure1_wide_20261103"
+ },
+ {
+  "figure": 3,
+  "entry": "render_figure2_wide.py",
+  "expected_pdf": "figure2.pdf",
+  "source": "outputs/figure2_wide_20261103"
+ },
+ {
+  "figure": 4,
+  "entry": "render_figure3.py",
+  "expected_pdf": "figure3.pdf",
+  "source": "outputs/figure3_wide_20261103"
+ },
+ {
+  "figure": 5,
+  "entry": "render_figure4.py",
+  "expected_pdf": "figure4.pdf",
+  "source": "outputs/figure4_cvd_20261104"
+ },
+ {
+  "figure": 6,
+  "entry": "render_figure5_short.py",
+  "expected_pdf": "figure5.pdf",
+  "source": "outputs/figure5_cvd_20261104"
+ },
+ {
+  "figure": 7,
+  "entry": "render_figure6.py",
+  "expected_pdf": "figure6.pdf",
+  "source": "outputs/figure6_short143_20261103"
+ }
+]

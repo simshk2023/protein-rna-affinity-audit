@@ -1,0 +1,37 @@
+{
+ "scope": "full_principal_evaluation",
+ "version": "v2026.11.17",
+ "units": 752,
+ "pairs": 338,
+ "source_links": 827,
+ "local_pairs": 220,
+ "local_landscapes": 21,
+ "local_families": 20,
+ "as_fitted_units": 771,
+ "candidate_pairs": 354,
+ "as_fitted_source_links": 846,
+ "pronab": {
+  "path": "pronab.csv (reader-obtained; not bundled)",
+  "bytes": 17608829,
+  "sha256": "132cae5018808e73e4585324e7013e30f292fdceb08386e5a20b0e93582d81a3",
+  "snapshot": "frozen study snapshot; see ACCESS.md"
+ },
+ "files": {
+  "predictions.csv": {
+   "bytes": 561735,
+   "sha256": "6758b5e24dcba12d4e07575b0a05150b480db528617ad8c6dabb1dcbc6980fb0"
+  },
+  "units.csv": {
+   "bytes": 111790,
+   "sha256": "22635031ecf51af92b669b32a330fb0f4ce02e51e8434468e0ac992d792ac3fa"
+  },
+  "pairs.csv": {
+   "bytes": 118157,
+   "sha256": "51f10ee833bf0e7cf9d96f5eab5c849a3e9539667c842f5b17074d5923d2732c"
+  },
+  "source_links.csv": {
+   "bytes": 142411,
+   "sha256": "47ff6f21c57430288cfe1cb7f7a6a5c68e81cf77059f09e7da8cf7aaf65e4231"
+  }
+ }
+}

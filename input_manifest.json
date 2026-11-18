@@ -1,0 +1,43 @@
+[
+ {
+  "path": "pronab.csv",
+  "role": "ProNAB provider snapshot",
+  "bytes": 17608829,
+  "sha256": "132cae5018808e73e4585324e7013e30f292fdceb08386e5a20b0e93582d81a3",
+  "rows": 21206,
+  "required": true,
+  "acquire": "https://web.iitm.ac.in/bioinfo2/pronab/",
+  "stable_join": "Entry_id + source_row_number + raw_column"
+ },
+ {
+  "path": "pra_formula.json",
+  "role": "PRA-Pred fitted equations",
+  "bundled": false,
+  "required_for": [
+   "Fig. 5",
+   "PRA mechanism verification"
+  ],
+  "schema": "third_party/pra_formula_schema.json",
+  "acquire": "https://github.com/Harinikannan98/PRA-Pred",
+  "executed_source_sha256": "667157288de06e6ef57c98f65c4c0ea2ec8be95a17d1c2cdb566046e79ebd88f"
+ },
+ {
+  "path": "pdb/{2C4R,2ZZN,4QVC,4NGD}.pdb",
+  "role": "wwPDB coordinate files",
+  "required_for": [
+   "Fig. 1"
+  ],
+  "acquire": "third_party/fetch_structures.py",
+  "identities": "third_party/checksums.json"
+ },
+ {
+  "path": "observations.csv",
+  "role": "S13 source-matched observations",
+  "required_for": [
+   "Fig. E1",
+   "S13"
+  ],
+  "template": "study_outputs/external/observations_template.csv",
+  "acquire": "study_outputs/external/ACCESS.md"
+ }
+]

@@ -1,0 +1,38 @@
+{
+  "units": "units.csv",
+  "pairs": "pairs.csv",
+  "predictions": "predictions.csv",
+  "unit": "pKd",
+  "direction": "higher means stronger; mutant minus WT",
+  "reference": "zero",
+  "methods": {
+    "endpoint": {
+      "type": "endpoint",
+      "seeds": [
+        "fixed"
+      ],
+      "identity": "demonstration fixed ensemble"
+    },
+    "direct": {
+      "type": "direct",
+      "seeds": [
+        "fixed"
+      ],
+      "identity": "demonstration direct predictor"
+    },
+    "score": {
+      "type": "score",
+      "seeds": [
+        "fixed"
+      ],
+      "identity": "demonstration native score, direction aligned"
+    },
+    "zero": {
+      "type": "zero",
+      "seeds": [
+        "fixed"
+      ],
+      "identity": "zero change reference"
+    }
+  }
+}

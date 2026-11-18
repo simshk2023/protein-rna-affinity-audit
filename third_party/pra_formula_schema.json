@@ -1,0 +1,48 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "PRA-Pred fitted-equation import",
+ "type": "object",
+ "required": [
+  "ss+str",
+  "ds+enz"
+ ],
+ "properties": {
+  "ss+str": {
+   "type": "object",
+   "required": [
+    "intercept",
+    "terms"
+   ],
+   "properties": {
+    "intercept": {
+     "type": "number"
+    },
+    "terms": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "number"
+     }
+    }
+   }
+  },
+  "ds+enz": {
+   "type": "object",
+   "required": [
+    "intercept",
+    "terms"
+   ],
+   "properties": {
+    "intercept": {
+     "type": "number"
+    },
+    "terms": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "number"
+     }
+    }
+   }
+  }
+ },
+ "notes": "Use the feature names from the executed source. The recorded paper source writes 'charged' in the printed equation; the feature export names the same column 'charged_float'. Do not rename other terms."
+}

@@ -1,0 +1,73 @@
+{
+  "resamples": 10000,
+  "seed": 20260921,
+  "unit": "whole family, same indices for both models and both metrics",
+  "region_definition": "50/95% highest-density sets of Gaussian KDE of bootstrap means in original SD-ratio/Spearman coordinates; then mapped to annular coordinates",
+  "kde_bandwidth": "Scott default",
+  "grid_shape": [
+    180,
+    180
+  ],
+  "region_audit": {
+    "baseline": {
+      "estimated_density_grid_mass": 0.9999999606302706,
+      "thresholds": {
+        "0.5": 53.39519436258822,
+        "0.95": 5.492959887514606
+      },
+      "probability_mass_above_threshold": {
+        "0.5": 0.5000410000176426,
+        "0.95": 0.9500162994758333
+      },
+      "original_metric_bounds": [
+        [
+          0.00501,
+          -0.2383549568919736
+        ],
+        [
+          0.1913762246657542,
+          0.501425821866517
+        ]
+      ]
+    },
+    "copra": {
+      "estimated_density_grid_mass": 0.9999999924572222,
+      "thresholds": {
+        "0.5": 5.9110620176703,
+        "0.95": 0.6151726638143546
+      },
+      "probability_mass_above_threshold": {
+        "0.5": 0.5001385077716043,
+        "0.95": 0.9500061510061667
+      },
+      "original_metric_bounds": [
+        [
+          0.029667854845009195,
+          -0.18269576283384292
+        ],
+        [
+          1.6059463179948923,
+          0.601025410844505
+        ]
+      ]
+    }
+  },
+  "paired_gain_estimate": [
+    0.5713555038061988,
+    0.040526326891948294
+  ],
+  "bootstrap_gain_distribution_mean": [
+    0.57070641672438,
+    0.039892317240027675
+  ],
+  "paired_gain_ci95": [
+    [
+      0.2807833677285554,
+      -0.08218987797498593
+    ],
+    [
+      0.9559599699882163,
+      0.16445497849854085
+    ]
+  ]
+}

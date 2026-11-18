@@ -1,0 +1,26 @@
+{
+  "units": "units.csv",
+  "pairs": "pairs.csv",
+  "predictions": "predictions.csv",
+  "unit": "pKd",
+  "direction": "mutant minus WT",
+  "reference": "A",
+  "bootstrap_draws_ordinary": 50,
+  "bootstrap_draws_local": 50,
+  "methods": {
+    "A": {
+      "type": "direct",
+      "seeds": [
+        "fixed"
+      ],
+      "identity": "synthetic"
+    },
+    "B": {
+      "type": "direct",
+      "seeds": [
+        "fixed"
+      ],
+      "identity": "synthetic"
+    }
+  }
+}

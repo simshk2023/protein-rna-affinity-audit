@@ -1,0 +1,35 @@
+{
+  "units": "units.csv",
+  "pairs": "pairs.csv",
+  "predictions": "predictions.csv",
+  "unit": "pKd",
+  "direction": "mutant minus WT; higher is stronger",
+  "reference": "baseline",
+  "methods": {
+    "baseline": {
+      "type": "endpoint",
+      "seeds": [
+        "20260916",
+        "20260917",
+        "20260918"
+      ],
+      "identity": "frozen controlled family OOF"
+    },
+    "copra": {
+      "type": "endpoint",
+      "seeds": [
+        "20260916",
+        "20260917",
+        "20260918"
+      ],
+      "identity": "frozen controlled family OOF"
+    },
+    "zero": {
+      "type": "zero",
+      "seeds": [
+        "fixed"
+      ],
+      "identity": "zero-change reference"
+    }
+  }
+}

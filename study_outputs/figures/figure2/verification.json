@@ -1,0 +1,52 @@
+{
+  "page_count": 1,
+  "size_mm": [
+    178.0,
+    164.0
+  ],
+  "raster_images": 0,
+  "fonts": {
+    "FTXWZA+STIXGeneral-Italic": 2172,
+    "DGPPHF+STIXNonUnicode-Regular": 1704,
+    "ELUGPM+ArialMT": 42060,
+    "ELUGPM+Arial-BoldMT": 22056,
+    "STIXGeneral Italic": 175040,
+    "GCWXDV+DejaVuSans-Oblique": 3072
+  },
+  "all_fonts_embedded": true,
+  "offpage_words": [],
+  "word_diff_new": {},
+  "word_diff_baseline": {},
+  "text_chars_new": 614,
+  "text_chars_baseline": 614,
+  "text_multiset_identical": false,
+  "text_char_multiset_identical": true,
+  "text_exact_match": false,
+  "font_sizes_new": {
+    "5.2": 3,
+    "7.5": 420,
+    "8.0": 111,
+    "8.5": 28,
+    "9.0": 49,
+    "11.0": 3
+  },
+  "font_sizes_baseline": {
+    "5.2": 3,
+    "7.5": 420,
+    "8.0": 111,
+    "8.5": 28,
+    "9.0": 49,
+    "11.0": 3
+  },
+  "font_size_chars_delta": 0,
+  "ink_margins_mm": {
+    "left_mm": 2.79,
+    "right_mm": 1.95,
+    "top_mm": 2.2,
+    "bottom_mm": 1.02
+  },
+  "ink_width_ratio": 0.9734,
+  "preview_png": "C:\\Users\\simsh\\Desktop\\CoPRA\\outputs\\figure1_wide_20261103\\preview.png",
+  "status": "PASS",
+  "problems": []
+}

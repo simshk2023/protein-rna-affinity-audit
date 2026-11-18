@@ -1,0 +1,46 @@
+{
+  "report_id": "GBNL-ASSETS-V1",
+  "checkpoint": {
+    "path": "esm2_t36_3B_UR50D.pt",
+    "size": 5678116398,
+    "sha256": "7de8b4082ba15891959ab368b77ce3886697af1efb16d3c9e9e7b0c5d3f07500"
+  },
+  "worker": {
+    "path": "gbnl_worker.py",
+    "sha256": "db90031ae97ff5f8611fc91f43e6ff5b2f4c4ead2012b11751b3463745e01d6d",
+    "recorded_version": "gbnl_worker.py saved in candidate_recovery_20260929"
+  },
+  "inputs": {
+    "r3_dataset": {
+      "path": "r3_dataset.csv",
+      "sha256": "c3e0543868a9f31cb281694d630f8c36d5f56825daf1a68b87491f542fb88ca4"
+    },
+    "r3_pairs": {
+      "path": "r3_pairs.csv",
+      "sha256": "bb43a7edf1ca8fe69c55221fe7e3c8694ae72690bfc9381eeaaa77b4444c00ac"
+    },
+    "r1_freeze": {
+      "path": "r1_freeze_candidate.json",
+      "sha256": "f63d8c352bc5001d484938d02f5c2a9fee6f51a414ef5ae76bd3689419d90681"
+    }
+  },
+  "scripts": {
+    "check_pipeline.py": "812b7662e3c8c12a3dd2a940f0022ec08eb94a4233d3299bd0fd3caa6e3614fc",
+    "common.py": "b3ae3a55c78ca5bc5d83524e211eb2dd2f93aced94ab825b24844eb794208ba2",
+    "export_errors.py": "8efcf7d48bc4b6aadfa0e5edf05919ae05af114f486b23448c9074157b5489a4",
+    "final_check.py": "f745afd628578948db9b25f2d3765fb254551886e73246bad62ab5cbc59353cd",
+    "fold_pipeline.py": "a04340e5deb5c79b04898fe3afe85ea5017bcaa6ad0da35ac33f8aa515448976",
+    "freeze_config.py": "37776045395ce72cdf0a987509ae22fb141e3d5bb78158d2b1401f236bf2bb03",
+    "prepare_inputs.py": "5f8d0cb226666ed3bfaa5127ea783bdd9df5790a3aea92d2c4e1706a7c8a9547",
+    "protein_features.py": "7221a93d807d52fd36bd896813e58bfb7613ce62b82f98d79b888cfe2a3f1c53",
+    "rna_betti.py": "dc8ebddc0f8191cc7cb6b73c8702e6876edca252b2d87f7390efa9db54d2efee",
+    "score_pipeline.py": "0329959f9c3e1486f921aa6a51b02ecf2e7af55f4e2fb988d34eac90c94e8fc2",
+    "summarize.py": "c513780409f1e2ec12f3696c171a3006b2368af04c6d24e8670f5c78a007b5ad"
+  },
+  "rna_cache_sequences": 175,
+  "protein_cache_vectors": 267,
+  "restricted_manifest_sha256": {
+    "unit_manifest": "daf260334666382ab71bad3d34f394e58520949c551fe14c1b647b0ecf59661c",
+    "pair_manifest": "d6476a7a70fc763cc43a135c8e2dec63313b5fd43aed525c4d1adfed7aa65c88"
+  }
+}

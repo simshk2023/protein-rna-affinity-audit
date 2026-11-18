@@ -1,0 +1,22 @@
+{
+  "figure4 ellipse pairs (dark/light, line widths 0.8/1.0/1.2/1.4)": {
+    "#00527F": 0.076,
+    "#56B4E9": 0.405,
+    "#B34700": 0.141,
+    "#E69F00": 0.416
+  },
+  "figure5 two conditions in panel C": {
+    "#0072B2": 0.152,
+    "#E69F00": 0.416
+  },
+  "figure5 panel B marks": {
+    "#56B4E9": 0.405,
+    "#D55E00": 0.222,
+    "#2B2B2B": 0.024
+  },
+  "dark / zero / tie in figure4 binary tracks": {
+    "#3A3A3A": 0.042,
+    "#F0F0F0": 0.871,
+    "#56B4E9": 0.405
+  }
+}

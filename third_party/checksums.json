@@ -1,0 +1,124 @@
+{
+ "version": "v2026.11.17",
+ "rule": "Local verification copies were read-only. Readers obtain the same public artifacts from the provider route recorded here and pass their local path to the replay.",
+ "pronab": {
+  "provider": "https://web.iitm.ac.in/bioinfo2/pronab/",
+  "snapshot_used_locally": "frozen study snapshot",
+  "bytes": 17608829,
+  "sha256": "132cae5018808e73e4585324e7013e30f292fdceb08386e5a20b0e93582d81a3",
+  "rows": 21206,
+  "stable_join": "Entry_id + source_row_number + raw_column; never infer from sequence alone"
+ },
+ "structures": {
+  "2C4R": {
+   "pdb_id": "2C4R",
+   "url": "https://files.rcsb.org/download/2C4R.pdb",
+   "bytes": 376488,
+   "sha256": "f7f838f4b63cb6bb4e12800f5099df70a10f9dfba40fb63919948b30bd304125",
+   "note": "wwPDB archive coordinate file; CC0 1.0; entry IDs are immutable versions."
+  },
+  "2ZZN": {
+   "pdb_id": "2ZZN",
+   "url": "https://files.rcsb.org/download/2ZZN.pdb",
+   "bytes": 751842,
+   "sha256": "d39906841d66b60ada807df2768434e08342403136ece9fee40957bf9766b44a",
+   "note": "wwPDB archive coordinate file; CC0 1.0; entry IDs are immutable versions."
+  },
+  "4QVC": {
+   "pdb_id": "4QVC",
+   "url": "https://files.rcsb.org/download/4QVC.pdb",
+   "bytes": 291276,
+   "sha256": "e3ec7d71e9b59712ba25a72319ac2146ff5417b377e1a242718fd4ba3e07166d",
+   "note": "wwPDB archive coordinate file; CC0 1.0; entry IDs are immutable versions."
+  },
+  "4NGD": {
+   "pdb_id": "4NGD",
+   "url": "https://files.rcsb.org/download/4NGD.pdb",
+   "bytes": 693036,
+   "sha256": "deb9caacc44be0155d7044a662ca8fb41005c7e4cb35bc2127311be0b22d5f6d",
+   "note": "wwPDB archive coordinate file; CC0 1.0; entry IDs are immutable versions."
+  }
+ },
+ "prorb": {
+  "github": "https://github.com/ymaa19/ProRB/tree/v2.2",
+  "git_commit": "6b18f2d144251fc5b8a5ac465528afe07c25da08",
+  "hf": "https://huggingface.co/ymaaaa/ProRB",
+  "hf_revision": "4b0091890c761fcb610a4bbf941e88307a3a0c36",
+  "checkpoint_file": "model.pt",
+  "checkpoint_bytes": 1733918683,
+  "checkpoint_sha256": "8037368b9eba020021a23db8ca396da4fd693a8b95d9b65285721a326da5ba36",
+  "checkpoint_license": "not verified from the model card; not redistributed"
+ },
+ "pra": {
+  "github": "https://github.com/Harinikannan98/PRA-Pred",
+  "executed_source_sha256": "667157288de06e6ef57c98f65c4c0ea2ec8be95a17d1c2cdb566046e79ebd88f",
+  "formula_bundled": false,
+  "formula_import_schema": "third_party/pra_formula_schema.json"
+ },
+ "m2": {
+  "github": "https://github.com/CSUBioGroup/M2-PRNet",
+  "git_commit": "8353164d2d4f9244c6fce6ea6bab4e35710c08cd",
+  "hf": "https://huggingface.co/NikoWz/M2-PRNet",
+  "hf_revision": "1b895b2330ed056bc973d55ad64a3a01af418cf0",
+  "checkpoints": [
+   {
+    "fold": 0,
+    "file": "fold_0.pt",
+    "sha256": "62a0d0788f96c8563ceaa1c31f0f1c46f9dae4d5866015b1b99360d5d7d8c6f1"
+   },
+   {
+    "fold": 1,
+    "file": "fold_1.pt",
+    "sha256": "9fa50d18ed85dd9a01cc0d97a2ccfe350d562ee0c39b2418f1a68b5f05e3fec1"
+   },
+   {
+    "fold": 2,
+    "file": "fold_2.pt",
+    "sha256": "08137d44a1fa621bc393ad0218b6bf336e763fad9e95a1076ad742515604d92a"
+   },
+   {
+    "fold": 3,
+    "file": "fold_3.pt",
+    "sha256": "96cb8fb094dfa9144cbee324742ab2fc10ad3181cf03a4f4062f16b70f43380c"
+   },
+   {
+    "fold": 4,
+    "file": "fold_4.pt",
+    "sha256": "1cb239a0755f8b59ab786c1f39c1da9465dbcaa6ecc2dead7b3dcb74465f1f6a"
+   }
+  ]
+ },
+ "services": {
+  "panther": {
+   "provider": "https://nova.disfarm.unimi.it/panther/",
+   "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12810179/",
+   "historical_version": "recorded 2026 study responses; current server/version not re-queried",
+   "pairs": 87,
+   "endpoint_responses": 110
+  },
+  "mcsm": {
+   "provider": "https://biosig.lab.uq.edu.au/mcsm_na/",
+   "paper": "https://doi.org/10.1093/nar/gkx236",
+   "historical_version": "recorded 2026 study responses; current server/version not re-queried",
+   "pairs": 267,
+   "request_ids": 54
+  }
+ },
+ "external": {
+  "sf3a1": {
+   "doi": "https://doi.org/10.1073/pnas.2114092119",
+   "pmid": "35101980",
+   "table": "Table 2"
+  },
+  "sepsecs": {
+   "doi": "https://doi.org/10.1093/nar/gkad182",
+   "pmid": "36929010",
+   "table": "Table 1"
+  },
+  "npl3": {
+   "doi": "https://doi.org/10.1038/s41467-023-42962-4",
+   "pmid": "37989742",
+   "table": "Supplementary Figure 7"
+  }
+ }
+}

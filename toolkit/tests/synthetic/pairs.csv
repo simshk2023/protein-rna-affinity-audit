@@ -1,0 +1,11 @@
+pair_id,family,landscape,position,wt_unit_id,mutant_unit_id,observed_delta
+L1_P1,F1,L1,1,L1_WT,L1_M1,1
+L1_P2,F1,L1,2,L1_WT,L1_M2,2
+L1_P3,F1,L1,3,L1_WT,L1_M3,3
+L1_P4,F1,L1,4,L1_WT,L1_M4,4
+L1_P5,F1,L1,5,L1_WT,L1_M5,5
+L2_P1,F1,L2,1,L2_WT,L2_M1,1
+L2_P2,F1,L2,2,L2_WT,L2_M2,2
+L2_P3,F1,L2,3,L2_WT,L2_M3,3
+L2_P4,F1,L2,4,L2_WT,L2_M4,4
+L2_P5,F1,L2,5,L2_WT,L2_M5,5

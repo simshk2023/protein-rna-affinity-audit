@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "size_mm": [
+    178.0,
+    164.0
+  ],
+  "data_sha256": "6dfeefd6cc8a1469fc227103ad2713b7135e7cd8d18bf02f5a5eba66dd866e8a",
+  "figure_text_identical_to_baseline": {
+    "only_new": {},
+    "only_baseline": {},
+    "identical": true
+  },
+  "embedded_fonts": {
+    "FTXWZA+STIXGeneral-Italic": 2172,
+    "DGPPHF+STIXNonUnicode-Regular": 1704,
+    "ELUGPM+ArialMT": 42060,
+    "ELUGPM+Arial-BoldMT": 22056,
+    "STIXGeneral Italic": 175040,
+    "GCWXDV+DejaVuSans-Oblique": 3072
+  },
+  "all_marks_vector": true,
+  "raster_images": 0,
+  "n_pos_unseen_text_layer": {
+    "chars": [
+      "0x1d62f",
+      "0x1d630",
+      "0x1d631",
+      "0x1d634"
+    ],
+    "native_sizes_pt": [
+      7.5,
+      5.25
+    ],
+    "reason": "matplotlib >=3.10 draws non-BMP STIX math-italic glyphs as vector paths; an invisible render-mode-3 text copy restores exact text extraction, rendered pixels asserted unchanged"
+  },
+  "panel_a": {
+    "columns_mm": [
+      [
+        15.5,
+        63.0
+      ],
+      [
+        72.0,
+        119.5
+      ],
+      [
+        128.5,
+        176.0
+      ]
+    ],
+    "scatter_y_mm": [
+      20,
+      49.5
+    ],
+    "reduction_y_mm": [
+      58,
+      69
+    ],
+    "native_geometry": true
+  },
+  "panel_b": {
+    "matrix_x_mm": [
+      11.0,
+      75.5
+    ],
+    "rows_mm": [
+      88.5,
+      144.5
+    ],
+    "column_width_mm": 21.5,
+    "row_height_mm": 2.8,
+    "n_pos_column_x_mm": 82.0
+  },
+  "panel_c": {
+    "response_native_canvas_mm": [
+      104.0000042385525,
+      88.00000110202365
+    ],
+    "crop_mm": [
+      13.91,
+      7.29,
+      89.32,
+      79.94
+    ],
+    "crop_size_mm": [
+      75.41,
+      72.65
+    ],
+    "target_rect_mm": [
+      99.79,
+      89.6,
+      175.2,
+      162.25
+    ],
+    "placement_scale": 1.0,
+    "fonts_preserved": true
+  },
+  "matrix_family_order": [
+    "F01",
+    "F04",
+    "F12",
+    "F17",
+    "F05",
+    "F06",
+    "F02",
+    "F09",
+    "F18",
+    "F13",
+    "F14",
+    "F20",
+    "F15",
+    "F16",
+    "F19",
+    "F03",
+    "F07",
+    "F08",
+    "F10",
+    "F11"
+  ],
+  "matrix_column_scales": [
+    1.1459113756815595,
+    0.3269410912443349,
+    0.2614607948915525
+  ],
+  "matrix_mean": [
+    0.054681151223003474,
+    0.058500463797093026,
+    -0.024259951631202852
+  ],
+  "base_layout_audit": []
+}

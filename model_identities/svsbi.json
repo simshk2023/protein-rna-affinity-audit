@@ -1,0 +1,81 @@
+{
+  "report_id": "SVSBI-PHASE-A-ASSETS-V1",
+  "date": "2026-10-15",
+  "download_status": "DOWNLOADS_VERIFIED (24/24 items)",
+  "note": "Encoder hashes are reused from the download verification report; the 7.8 GB ESM-1b local fingerprint is not re-hashed here. Only搬运/内容变化 triggers re-check.",
+  "assets": [
+    {
+      "role": "protein_encoder",
+      "file": "SVSBI/esm1b/esm1b_t33_650M_UR50S.pt",
+      "bytes": 7828576466,
+      "sha256": "0569754efaff7dcb7e068c27367bc73f10afb4b450ea30aac30d9bc60783a8b1",
+      "hash_reference": "local_fingerprint_only",
+      "loaded": true
+    },
+    {
+      "role": "protein_encoder_contact_regression",
+      "file": "SVSBI/esm1b/esm1b_t33_650M_UR50S-contact-regression.pt",
+      "bytes": 3174,
+      "sha256": "77193a8814f0db0b36a03aebb1a311adc6b4745f463c04839defc15407bbb28a",
+      "hash_reference": "previous_local_receipt",
+      "loaded": true
+    },
+    {
+      "role": "rna_encoder_weights",
+      "file": "SVSBI/dnabert3/pytorch_model.bin",
+      "bytes": 346797460,
+      "sha256": "8b20083ff1a993e022a89c09c2f7047102472fe5232c3815ee50b0b0359032ba",
+      "hash_reference": "upstream_lfs",
+      "loaded": true
+    },
+    {
+      "role": "rna_encoder_config",
+      "file": "SVSBI/dnabert3/config.json",
+      "sha256": "922eaf65e7f1887d65376242f25aa3aaf95b58863cf93cd9d1614df8425cae4d",
+      "hash_reference": "previous_local_receipt"
+    },
+    {
+      "role": "rna_encoder_vocab",
+      "file": "SVSBI/dnabert3/vocab.txt",
+      "sha256": "2b32fac2e2451a372dacc78c6953827052b8fdc70d9d7d3be7bc96016ae855f9",
+      "hash_reference": "previous_local_receipt"
+    },
+    {
+      "role": "rna_encoder_layer_code",
+      "file": "SVSBI/dnabert3/dnabert_layer.py",
+      "sha256": "40e2d82fdb296c87f944427225e9012bb4b25bfb1b5614d2e66ec79c2078a344",
+      "hash_reference": "previous_local_receipt",
+      "used": false,
+      "note": "no-op subclass of transformers BertModel; standard BertModel is equivalent and was used instead"
+    }
+  ],
+  "source_data": [
+    {
+      "role": "frozen_dataset",
+      "path": "r3_dataset.csv",
+      "rows": 771,
+      "sha256": "c3e0543868a9f31cb281694d630f8c36d5f56825daf1a68b87491f542fb88ca4"
+    },
+    {
+      "role": "frozen_pairs",
+      "path": "r3_pairs.csv",
+      "rows": 354,
+      "sha256": "bb43a7edf1ca8fe69c55221fe7e3c8694ae72690bfc9381eeaaa77b4444c00ac"
+    },
+    {
+      "role": "family_fold_freeze",
+      "path": "r1_freeze_candidate.json",
+      "sha256": "f63d8c352bc5001d484938d02f5c2a9fee6f51a414ef5ae76bd3689419d90681"
+    },
+    {
+      "role": "common_range_pairs",
+      "path": "common_pairs.csv",
+      "rows": 354
+    },
+    {
+      "role": "b_shape_pairs",
+      "path": "b_shape_pairs.csv",
+      "rows": 238
+    }
+  ]
+}

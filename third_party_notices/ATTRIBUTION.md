@@ -1,0 +1,12 @@
+# Third-party attribution
+
+The following notices identify external works and their terms. They do not license this project's original contributions. No model weights are bundled.
+
+- CoPRA: Copyright (c) 2024 Rong Han. MIT; see CoPRA-MIT.txt, copied without changes from the existing local candidate notice and checked against CoPRA-src/LICENSE. Recorded source baseline: 948debf7914db48faf16f7bcdce280601dd25415. [Source](https://github.com/hanrthu/CoPRA).
+- ESM/fair-esm 2.0.0: Copyright (c) Facebook, Inc. and its affiliates. MIT. See ESM-2.0.0-MIT.txt, extracted from fair_esm-2.0.0.dist-info/LICENSE in the downloaded 2.0.0 wheel. The two LICENSE entries in that wheel are identical and no NOTICE entry was found. The [current official license](https://github.com/facebookresearch/esm/blob/main/LICENSE) uses the newer Meta name; historical package attribution is retained verbatim.
+- RiNALMo code: Copyright 2024 Šikić Lab - AI in Genomics. Apache License 2.0; see RiNALMo-Apache-2.0.txt. [Official source and license distinctions](https://github.com/lbcb-sci/RiNALMo#license). No separate NOTICE was found in the inspected local tree or official root listing. Preserve any applicable NOTICE in the actual source version adopted for redistribution, retain attribution and mark modified files.
+- RiNALMo parameters: Penić, Vlašić, Huber, Wan and Šikić, RiNALMo: General-Purpose RNA Language Models Can Generalize Well on Structure Prediction Tasks. [Weights record](https://zenodo.org/records/15043668), [CC BY 4.0 terms](https://creativecommons.org/licenses/by/4.0/). Parameters are not modified or redistributed in this candidate; changes must be indicated if later distributed.
+- PDB archive: [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/), per [RCSB policy](https://www.rcsb.org/pages/policies). Attribute original structure authors when using their entries; separately sourced content is subject to its own terms.
+- UniProt Consortium: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) for copyrightable database contents, [policy](https://www.uniprot.org/help/license). Downloaded accession/version identities and processing changes must accompany any later use.
+
+CoPRA and RiNALMo license texts already available locally and the downloaded fair-esm 2.0.0 package license are copied here. The absence of other license copies is not permission to bundle their source, weights or data without applicable terms. Public availability and publication licenses are not blanket redistribution grants for separate datasets.

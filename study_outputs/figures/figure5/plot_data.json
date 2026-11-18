@@ -1,0 +1,362 @@
+{
+  "scope": {
+    "pairs": 106,
+    "positions": 87,
+    "landscapes": 15,
+    "families": 14,
+    "units": 121,
+    "categories": {
+      "all_terms_unchanged": 42,
+      "nonzero_response": 64
+    },
+    "exact_zero": 42,
+    "near_zero_G_1e12": 42,
+    "rounded_zero": 55,
+    "rounding_only_zero": 13,
+    "cancellation": {
+      "n": 64,
+      "mean": 0.11559229485982211,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.9855497942137527,
+      "q25": 0.0,
+      "q75": 0.10133974080859806
+    },
+    "hierarchical_category_weight": {
+      "all_terms_unchanged": 0.38676582038651,
+      "nonzero_response": 0.6132341796134896
+    },
+    "sum_weights": 0.9999999999999994
+  },
+  "branches": {
+    "ss+str": {
+      "pairs": 13,
+      "families": 3,
+      "landscapes": 3,
+      "exact_zero": 9,
+      "rounding_only": 1,
+      "terms": [
+        {
+          "term": "mcmc1",
+          "changed_pairs": 0,
+          "change_rate": 0.0,
+          "mean_contribution": 0.0,
+          "between_sd": 0.18569593481661634,
+          "within_sd": 0.0,
+          "category": "Energy"
+        },
+        {
+          "term": "NO1",
+          "changed_pairs": 0,
+          "change_rate": 0.0,
+          "mean_contribution": 0.0,
+          "between_sd": 0.0,
+          "within_sd": 0.0,
+          "category": "Contacts"
+        },
+        {
+          "term": "charged_float",
+          "changed_pairs": 2,
+          "change_rate": 0.19999999999999998,
+          "mean_contribution": 0.04586724750029383,
+          "between_sd": 0.5507519280034039,
+          "within_sd": 0.06418683876092411,
+          "category": "Contacts"
+        },
+        {
+          "term": "ele",
+          "changed_pairs": 3,
+          "change_rate": 0.13333333333333333,
+          "mean_contribution": -0.00032563346099269343,
+          "between_sd": 0.4875711819957865,
+          "within_sd": 0.0023385729637497845,
+          "category": "Energy"
+        }
+      ],
+      "landscape_contributions": [
+        {
+          "landscape": "L01",
+          "family_weight": 0.3333333333333333,
+          "contributions": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 4
+        },
+        {
+          "landscape": "L02",
+          "family_weight": 0.3333333333333333,
+          "contributions": [
+            0.0,
+            0.0,
+            0.022933623750146917,
+            -0.0009769003829780802
+          ],
+          "positions": 5
+        },
+        {
+          "landscape": "L03",
+          "family_weight": 0.3333333333333333,
+          "contributions": [
+            0.0,
+            0.0,
+            0.11466811875073457,
+            0.0
+          ],
+          "positions": 2
+        }
+      ]
+    },
+    "ds+enz": {
+      "pairs": 93,
+      "families": 11,
+      "landscapes": 12,
+      "exact_zero": 33,
+      "rounding_only": 12,
+      "terms": [
+        {
+          "term": "no_count",
+          "changed_pairs": 13,
+          "change_rate": 0.2341692789968652,
+          "mean_contribution": 0.06595714876206187,
+          "between_sd": 1.916804158823666,
+          "within_sd": 0.07338302731964007,
+          "category": "Contacts"
+        },
+        {
+          "term": "cc_count",
+          "changed_pairs": 8,
+          "change_rate": 0.1654649947753396,
+          "mean_contribution": 0.010218909856964803,
+          "between_sd": 1.2672878686772207,
+          "within_sd": 0.07493312606933027,
+          "category": "Contacts"
+        },
+        {
+          "term": "torsional_clash",
+          "changed_pairs": 60,
+          "change_rate": 0.6986616831444419,
+          "mean_contribution": -0.03638651845959871,
+          "between_sd": 3.2733023529926455,
+          "within_sd": 0.03902038329859452,
+          "category": "Energy"
+        },
+        {
+          "term": "Incl1",
+          "changed_pairs": 0,
+          "change_rate": 0.0,
+          "mean_contribution": 0.0,
+          "between_sd": 0.46750684548889976,
+          "within_sd": 5.874748045952207e-16,
+          "category": "Geometry"
+        },
+        {
+          "term": "Buckle1",
+          "changed_pairs": 0,
+          "change_rate": 0.0,
+          "mean_contribution": 0.0,
+          "between_sd": 0.28590808908589344,
+          "within_sd": 8.787051969567965e-17,
+          "category": "Geometry"
+        },
+        {
+          "term": "rise1",
+          "changed_pairs": 0,
+          "change_rate": 0.0,
+          "mean_contribution": 0.0,
+          "between_sd": 0.32185509153636144,
+          "within_sd": 7.085212729562556e-16,
+          "category": "Geometry"
+        }
+      ],
+      "landscape_contributions": [
+        {
+          "landscape": "L01",
+          "family_weight": 0.09090909090909091,
+          "contributions": [
+            0.0,
+            0.0,
+            -0.009420426857204015,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 13
+        },
+        {
+          "landscape": "L02",
+          "family_weight": 0.09090909090909091,
+          "contributions": [
+            0.0,
+            -0.030928199661971273,
+            -0.02068650790195115,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 2
+        },
+        {
+          "landscape": "L03",
+          "family_weight": 0.09090909090909091,
+          "contributions": [
+            0.0,
+            0.0,
+            -0.08376835580579514,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 2
+        },
+        {
+          "landscape": "L04",
+          "family_weight": 0.09090909090909091,
+          "contributions": [
+            0.05640151943610944,
+            0.03199468930548752,
+            -0.040879479984182066,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 29
+        },
+        {
+          "landscape": "L05",
+          "family_weight": 0.09090909090909091,
+          "contributions": [
+            0.0743474574385079,
+            0.018556919797182766,
+            -0.04661576098446823,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 10
+        },
+        {
+          "landscape": "L06",
+          "family_weight": 0.045454545454545456,
+          "contributions": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 2
+        },
+        {
+          "landscape": "L07",
+          "family_weight": 0.045454545454545456,
+          "contributions": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 2
+        },
+        {
+          "landscape": "L08",
+          "family_weight": 0.09090909090909091,
+          "contributions": [
+            0.0,
+            -0.18556919797182764,
+            0.0216554934461336,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 2
+        },
+        {
+          "landscape": "L09",
+          "family_weight": 0.09090909090909091,
+          "contributions": [
+            0.2973898297540316,
+            0.0,
+            -0.04450843967026168,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 1
+        },
+        {
+          "landscape": "L10",
+          "family_weight": 0.09090909090909091,
+          "contributions": [
+            0.0,
+            0.27835379695774143,
+            -0.07802111585796054,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 2
+        },
+        {
+          "landscape": "L11",
+          "family_weight": 0.09090909090909091,
+          "contributions": [
+            0.0,
+            0.0,
+            -0.039547944866098125,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 10
+        },
+        {
+          "landscape": "L12",
+          "family_weight": 0.09090909090909091,
+          "contributions": [
+            0.2973898297540316,
+            0.0,
+            -0.05845916457379837,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "positions": 1
+        }
+      ]
+    }
+  },
+  "structure": {
+    "source": "C:\\Users\\simsh\\Desktop\\CoPRA\\PRA310\\PDBs\\2C4R.pdb",
+    "representation": "Wild-type Phe57 and RNA G10; no simulated mutant coordinates",
+    "distance_A": 2.7989682071762747,
+    "archive_distance_A": 2.798968,
+    "coordinate_transform": "rigid orthonormal rotation and translation",
+    "rotation_orthogonality_error": 3.3306690738754696e-16,
+    "view": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      -56.46308898925781,
+      1.4828429222106934,
+      1.5137066841125488,
+      2.036693572998047,
+      44.51593017578125,
+      68.41024780273438,
+      20.0
+    ]
+  }
+}

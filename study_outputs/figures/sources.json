@@ -1,0 +1,54 @@
+{
+  "1": {
+    "bundled": [
+      "figure1/outputs/figure1_redesign_20261023/complex_1a9n.png",
+      "figure1/outputs/problem_framing_ribbon_20261107/renders/2C4R_contact.png",
+      "figure1/outputs/problem_framing_ribbon_20261107/renders/2C4R_ribbon.png",
+      "figure1/outputs/problem_framing_ribbon_20261107/renders/2ZZN_ribbon.png",
+      "figure1/outputs/problem_framing_ribbon_20261107/renders/4NGD_ribbon.png",
+      "figure1/outputs/problem_framing_ribbon_20261107/renders/4QVC_ribbon.png"
+    ],
+    "authorized": []
+  },
+  "2": {
+    "bundled": [
+      "figure2/family_aggregates.json",
+      "figure2/bootstrap_regions.json",
+      "figure2/plot_coordinates.json",
+      "figure2/local_family_summary.json",
+      "figure2/render_summary.json",
+      "figure2/verification.json"
+    ],
+    "authorized": []
+  },
+  "3": {
+    "bundled": ["figure3/plot_data.json"],
+    "authorized": []
+  },
+  "4": {
+    "bundled": ["figure4/plot_data.json"],
+    "authorized": []
+  },
+  "5": {
+    "bundled": [
+      "figure5/plot_data.json",
+      "figure5/covariance_data.json",
+      "figure5/ellipse_data.json",
+      "figure5/restricted/pair_features.json"
+    ],
+    "authorized": []
+  },
+  "6": {
+    "bundled": ["figure6/plot_data.json", "figure6/plot_data_D.json"],
+    "authorized": []
+  },
+  "7": {
+    "bundled": [
+      "figure7/plot_data.json",
+      "figure7/family_seed_metrics.csv",
+      "figure7/landscape_seed_metrics.csv",
+      "figure7/merged_gain_data.csv"
+    ],
+    "authorized": []
+  }
+}
